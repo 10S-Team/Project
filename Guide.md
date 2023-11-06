@@ -28,13 +28,21 @@
 
 ![image-20231106134154680](https://p.ipic.vip/duhdve.png)
 
-![image-20231106134229538](https://p.ipic.vip/pm9t4q.png
+![image-20231106134229538](https://p.ipic.vip/pm9t4q.png)
 
 ![image-20231106135046740](https://p.ipic.vip/gfu9ci.png)
 
 여기에서 ReadProductProfile.mobileprovision을 선택해주세요
 
-### 4. 휴대폰을 맥에 연결하고 빌드 해 보기
+### 4. Certification 추가하기
+
+제가 보낸 development.p12 파일을 클릭하시면 키체인에 등록 되고 Xcode에서도 사용 될 수 있습니다.
+
+![image-20231106151517783](https://p.ipic.vip/66vxm9.png)
+
+이렇게 뜨면 제가 드린 비밀번호를 입력하시면 됩니다!
+
+### 5. 휴대폰을 맥에 연결하고 빌드 해 보기
 
 <img src="https://p.ipic.vip/736n6g.png" alt="image-20231106135613200" style="zoom:33%;" /><img src="https://p.ipic.vip/srr1r7.png" alt="image-20231106135825999" style="zoom:33%;" />
 
