@@ -9,9 +9,21 @@ import SwiftUI
 
 @main
 struct ReadProductApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+  @State var splash = true
+  var body: some Scene {
+    WindowGroup {
+      if splash {
+        SplashView().onAppear{
+          DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+            withAnimation {
+              splash = false
+            }
+          }
         }
+      }
+      else {
+        ContentView()
+      }
     }
+  }
 }
