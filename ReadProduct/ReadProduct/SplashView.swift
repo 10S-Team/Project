@@ -9,7 +9,7 @@ import SwiftUI
 import Lottie
 struct SplashView: View {
     var body: some View {
-      LottieView(jsonName: "splashView")
+      LottieView(jsonName: "splashView", loopMode: .playOnce)
         .ignoresSafeArea()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
