@@ -14,7 +14,7 @@ struct ReadProductApp: App {
     WindowGroup {
       if splash {
         SplashView().onAppear{
-          DispatchQueue.main.asyncAfter(deadline: .now() + 2.2) {
+          DispatchQueue.main.asyncAfter(deadline: .now() + 2.7) {
             withAnimation {
               splash = false
             }
