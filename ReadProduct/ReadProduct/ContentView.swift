@@ -28,7 +28,7 @@ struct ContentView: View {
                         .imageScale(.large)
                         .frame(maxWidth: .infinity, maxHeight: 400, alignment: .center)
                         
-                    Text("사진찍기")
+                    Text("카메라")
                         .foregroundStyle(Color.black)
                         .font(.appFont(for: .Thin, size: 20))
                 }
