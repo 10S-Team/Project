@@ -14,23 +14,19 @@ extension Color {
     static let appGreen: Color = Color(red: 0.6, green: 0.85, blue: 0.67)
     static let appTextLightGray: Color = Color(red: 0.85, green: 0.85, blue: 0.85)
     static let appTextDarkGray: Color = Color(red: 0.59, green: 0.59, blue: 0.59)
-    static func appColorAdaptScheme(type: appColor, scheme: ColorScheme) -> Color {
-        switch scheme {
-        case .light:
-            type.color
-        case .dark:
-            type.darkColor
-        @unknown default:
-            type.color
-        }
+    static func appColor(type: appColorType, scheme: ColorScheme = .light) -> Color {
+        return scheme == .dark ? type.darkColor : type.color
     }
-    enum appColor {
+}
+extension Color {
+    enum appColorType {
         case appRed
         case appYellow
         case appYellowPale
         case appGreen
         case appTextLightGray
         case appTextDarkGray
+        case appTextBlack
         var color: Color {
             switch self {
             case .appRed:
@@ -45,6 +41,8 @@ extension Color {
                 Color(red: 0.85, green: 0.85, blue: 0.85)
             case .appTextDarkGray:
                 Color(red: 0.59, green: 0.59, blue: 0.59)
+            case .appTextBlack:
+                Color(red: 0, green:0, blue: 0)
             }
         }
         var darkColor: Color {
@@ -61,13 +59,13 @@ extension Color {
                 Color(red: 0.96, green: 0.96, blue: 0.96)
             case .appTextDarkGray:
                 Color(red: 0.83, green: 0.83, blue: 0.83)
+            case .appTextBlack:
+                Color(red: 1, green:1, blue: 1)
             }
         }
     }
 }
-extension UIColor {
-    public static let appYellow: UIColor = UIColor(red: 0.97, green: 0.82, blue: 0.38, alpha: 1)
-}
+
 struct ColorListSampleView: View {
     var body: some View {
         ZStack {
@@ -97,11 +95,11 @@ struct ColorListSampleView: View {
 }
 
 struct lightAndDarkView: View {
-    var type: Color.appColor
+    var type: Color.appColorType
     var body: some View {
         HStack(spacing: 0){
-            Rectangle().foregroundStyle(Color.appColorAdaptScheme(type: type, scheme: .light))
-            Rectangle().foregroundStyle(Color.appColorAdaptScheme(type: type, scheme: .dark))
+            Rectangle().foregroundStyle(Color.appColor(type: type, scheme: .light))
+            Rectangle().foregroundStyle(Color.appColor(type: type, scheme: .dark))
         }
     }
 }
