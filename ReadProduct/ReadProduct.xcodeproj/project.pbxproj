@@ -183,11 +183,12 @@
 			};
 			buildConfigurationList = DA3C14532AF31E2D00324A14 /* Build configuration list for PBXProject "ReadProduct" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = DA3C144F2AF31E2D00324A14;
 			packageReferences = (
@@ -378,6 +379,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReadProduct/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "상품 사진을 찍기 위해 카메라 사용이 필요합니다.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "상품 사진을 불러오기 위해 사진 접근이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -418,6 +421,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ReadProduct/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "상품 사진을 찍기 위해 카메라 사용이 필요합니다.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "상품 사진을 불러오기 위해 사진 접근이 필요합니다.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

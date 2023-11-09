@@ -18,7 +18,8 @@ struct ContentView: View {
             .font(.appFont(for: .Thin, size: 30))
             .foregroundColor(.appColor(type: .appTextBlack,scheme: scheme))
             .padding(.top,50)
-            .accessibilityLabel(.init("상품을 찍어서 읽어보아요"))
+            .accessibilityLabel("상품을 찍어서 읽어보아요!")
+            
             ZStack {
                 Rectangle()
                     .foregroundStyle(Color.clear)
@@ -28,6 +29,7 @@ struct ContentView: View {
                 Image(.camera)
                     .imageScale(.large)
                     .foregroundStyle(.tint)
+                    .accessibilityHidden(true)
             }.padding(.horizontal,30)
                 .padding(.top,50)
                 .padding(.bottom,100)
@@ -35,7 +37,7 @@ struct ContentView: View {
                     sourceType = .camera
                     callPicker = true
                 }
-                .accessibilityLabel(.init("사진 찍기"))
+                .accessibilityLabel(.init("사진을 찍어요"))
             Button(action: {
                 sourceType = .photoLibrary
                 callPicker = true
@@ -48,6 +50,7 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, maxHeight: 56)
                 .background(Color.appColor(type: .appYellow,scheme: scheme))
                 .cornerRadius(20)
+                .accessibilityLabel("사진을 불러와요")
         }.fullScreenCover(isPresented: $callPicker,
                           content: {
             ImagePicker(image: $image, type: sourceType)
