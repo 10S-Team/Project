@@ -10,12 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            
             Text("상품을 찍어서 읽어보아요!")
                 .font(.appFont(for: .Bold, size: 25))
                 .frame(width: .infinity, height: .infinity, alignment: .center)
                 .padding(.top, 70)
-                //.padding()
             
             // 사진찍기 버튼
             Button(action: {
@@ -31,9 +29,7 @@ struct ContentView: View {
                     Text("카메라")
                         .foregroundStyle(Color.black)
                         .font(.appFont(for: .Regular, size: 20))
-                        //.multilineTextAlignment(.center)
                         .padding()
-                        
                 }
             })
             .padding(.horizontal, 50)
@@ -41,10 +37,7 @@ struct ContentView: View {
             .buttonStyle(.borderedProminent)
             .tint(Color.appYellow)
             .frame(alignment: .center)
-            
-            
-            //Spacer()
-            
+    
             // 사진 불러오기 버튼
             Button(action: {
                 // 코드 작성
@@ -54,17 +47,12 @@ struct ContentView: View {
                     .font(.appFont(for: .Regular, size: 20))
                     .frame(maxWidth: .infinity)
                     .padding()
-                    //.frame(width: .infinity, height: .infinity)
-                    
             })
             .buttonStyle(.borderedProminent)
             .tint(Color.appYellow)
             .padding(.top, 130)
-            //.aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-
         } // VStack
         .edgesIgnoringSafeArea(.bottom)
-        //.padding()
     }
 }
 
