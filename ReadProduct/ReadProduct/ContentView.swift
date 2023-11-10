@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
-
+import PhotosUI
 struct ContentView: View {
+    @Environment(\.colorScheme) var scheme
+    @State private var image: UIImage?
+    @State private var sourceType: UIImagePickerController.SourceType = .camera
+    @State private var callPicker: Bool = false
     var body: some View {
         VStack {
             Text("상품을 찍어서 읽어보아요!")
