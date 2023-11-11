@@ -12,7 +12,8 @@ struct SplashView: View {
       LottieView(jsonName: "splashView", loopMode: .playOnce)
         .ignoresSafeArea()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .border(200)
+
+        
     }
 }
 
