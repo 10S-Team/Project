@@ -12,6 +12,7 @@ struct ImagePicker : UIViewControllerRepresentable {
   var type: UIImagePickerController.SourceType
   func makeUIViewController(context: Context) -> UIImagePickerController {
     let picker = UIImagePickerController()
+      //피커 세팅
     picker.sourceType = type
     picker.delegate = context.coordinator
     return picker
