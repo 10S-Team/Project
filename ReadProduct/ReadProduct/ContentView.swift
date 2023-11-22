@@ -16,8 +16,9 @@ struct ContentView: View {
         VStack {
             Text("상품을 찍어서 읽어보아요!")
                 .font(.appFont(for: .Bold, size: 25))
-                .frame(width: .infinity, height: .infinity, alignment: .center)
+                .frame(alignment: .center)
                 .padding(.top, 70)
+                .accessibilityLabel("상품을 찍어서 읽어보아요!")
             
             // 사진찍기 버튼
             Button(action: {
@@ -41,6 +42,7 @@ struct ContentView: View {
             .buttonStyle(.borderedProminent)
             .tint(Color.appYellow)
             .frame(alignment: .center)
+            .accessibilityLabel("사진을 찍어서 상품 이름을 알아보아요.")
     
             // 사진 불러오기 버튼
             Button(action: {
@@ -55,10 +57,12 @@ struct ContentView: View {
             .buttonStyle(.borderedProminent)
             .tint(Color.appYellow)
             .padding(.top, 130)
+            .accessibilityLabel("사진을 가져와서 상품 이름을 알아보아요.")
         } // VStack
         .edgesIgnoringSafeArea(.bottom)
     }
 }
+
 
 #Preview {
     ContentView()
