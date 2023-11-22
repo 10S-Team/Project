@@ -106,9 +106,18 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DAC19F3D2B0CB4BB002FE2E8 /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				DA880D8F2B0CCCE4005FE810 /* classifier.mlmodel */,
+			);
+			path = ML;
+			sourceTree = "<group>";
+		};
 		DAED24CB2AF8B0AF0044715A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				DAC19F3D2B0CB4BB002FE2E8 /* ML */,
 				DAED24F12AF9D2330044715A /* Animation */,
 				DAED24D02AF8B2430044715A /* Fonts */,
 				DAED24CC2AF8B0BD0044715A /* Colors.swift */,
@@ -236,6 +245,7 @@
 				DAED24CD2AF8B0BD0044715A /* Colors.swift in Sources */,
 				DA3C145E2AF31E2D00324A14 /* ContentView.swift in Sources */,
 				DAED24F72AF9D2F90044715A /* LottieView.swift in Sources */,
+				DA880D902B0CCCE4005FE810 /* classifier.mlmodel in Sources */,
 				DA3C145C2AF31E2D00324A14 /* ReadProductApp.swift in Sources */,
 				DAED24F52AF9D25C0044715A /* SplashView.swift in Sources */,
 			);
