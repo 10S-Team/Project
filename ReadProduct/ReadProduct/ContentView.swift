@@ -15,47 +15,48 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("상품을 찍어서 읽어보아요!")
-            .font(.appFont(for: .Thin, size: 30))
-            .foregroundColor(.appColor(type: .appTextBlack,scheme: scheme))
-            .padding(.top,50)
-            .accessibilityLabel("상품을 찍어서 읽어보아요!")
+                .font(.appFont(for: .Bold, size: 25))
+                .frame(width: .infinity, height: .infinity, alignment: .center)
+                .padding(.top, 70)
             
-            ZStack {
-                Rectangle()
-                    .foregroundStyle(Color.clear)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .background(Color.appColor(type: .appYellow,scheme: scheme))
-                    .cornerRadius(20)
-                Image(.camera)
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                    .accessibilityHidden(true)
-            }.padding(.horizontal,30)
-                .padding(.top,50)
-                .padding(.bottom,100)
-                .onTapGesture {
-                    sourceType = .camera
-                    callPicker = true
-                }
-                .accessibilityLabel(.init("사진을 찍어요"))
+            // 사진찍기 버튼
             Button(action: {
-                sourceType = .photoLibrary
-                callPicker = true
-            },
-                   label: {
+                // 코드 작성
+            }, label: {
+                
+                VStack{
+                    Image(.camera)
+                        .aspectRatio(contentMode: .fill)
+                        .imageScale(.large)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        
+                    Text("카메라")
+                        .foregroundStyle(Color.black)
+                        .font(.appFont(for: .Regular, size: 20))
+                        .padding()
+                }
+            })
+            .padding(.horizontal, 50)
+            .padding(.top, 30)
+            .buttonStyle(.borderedProminent)
+            .tint(Color.appYellow)
+            .frame(alignment: .center)
+    
+            // 사진 불러오기 버튼
+            Button(action: {
+                // 코드 작성
+            }, label: {
                 Text("사진에서 불러오기")
-                    .font(.appFont(for: .ExtraBold, size: 20))
-                    .foregroundStyle(Color.appColor(type: .appRed,scheme: scheme))
-            }).foregroundColor(.clear)
-                .frame(maxWidth: .infinity, maxHeight: 56)
-                .background(Color.appColor(type: .appYellow,scheme: scheme))
-                .cornerRadius(20)
-                .accessibilityLabel("사진을 불러와요")
-        }.fullScreenCover(isPresented: $callPicker,
-                          content: {
-            ImagePicker(image: $image, type: sourceType)
-                .ignoresSafeArea()
-        }).padding()
+                    .foregroundStyle(Color.black)
+                    .font(.appFont(for: .Regular, size: 20))
+                    .frame(maxWidth: .infinity)
+                    .padding()
+            })
+            .buttonStyle(.borderedProminent)
+            .tint(Color.appYellow)
+            .padding(.top, 130)
+        } // VStack
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 
