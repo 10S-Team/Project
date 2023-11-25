@@ -7,11 +7,14 @@
 
 import SwiftUI
 import PhotosUI
+
 struct ContentView: View {
+    
     @Environment(\.colorScheme) var scheme
     @State private var image: UIImage?
     @State private var sourceType: UIImagePickerController.SourceType = .camera
     @State private var callPicker: Bool = false
+    
     var body: some View {
         VStack {
             Text("상품을 찍어서 읽어보아요!")
@@ -22,7 +25,9 @@ struct ContentView: View {
             
             // 사진찍기 버튼
             Button(action: {
-                // 코드 작성
+                self.sourceType = .camera
+                self.callPicker = true
+                
             }, label: {
                 
                 VStack{
@@ -46,7 +51,9 @@ struct ContentView: View {
     
             // 사진 불러오기 버튼
             Button(action: {
-                // 코드 작성
+                self.sourceType = .photoLibrary
+                self.callPicker = true
+                
             }, label: {
                 Text("사진에서 불러오기")
                     .foregroundStyle(Color.black)
@@ -60,6 +67,9 @@ struct ContentView: View {
             .accessibilityLabel("사진을 가져와서 상품 이름을 알아보아요.")
         } // VStack
         .edgesIgnoringSafeArea(.bottom)
+        .sheet(isPresented: $callPicker) {
+            ImagePicker(image: $image, type: sourceType)
+        }
     }
 }
 
