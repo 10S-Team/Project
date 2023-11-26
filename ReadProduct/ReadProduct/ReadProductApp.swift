@@ -22,7 +22,7 @@ struct ReadProductApp: App {
         }
       }
       else {
-        ContentView()
+          ProductresultView()
       }
     }
   }

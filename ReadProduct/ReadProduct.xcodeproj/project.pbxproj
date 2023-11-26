@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B0DD51102B13081C000D72AB /* ProductresultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DD510F2B13081C000D72AB /* ProductresultView.swift */; };
 		DA3C145C2AF31E2D00324A14 /* ReadProductApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C145B2AF31E2D00324A14 /* ReadProductApp.swift */; };
 		DA3C145E2AF31E2D00324A14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C145D2AF31E2D00324A14 /* ContentView.swift */; };
 		DA3C14602AF31E2F00324A14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3C145F2AF31E2F00324A14 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B0DD510F2B13081C000D72AB /* ProductresultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductresultView.swift; sourceTree = "<group>"; };
 		DA3C14582AF31E2D00324A14 /* ReadProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3C145B2AF31E2D00324A14 /* ReadProductApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadProductApp.swift; sourceTree = "<group>"; };
 		DA3C145D2AF31E2D00324A14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				DAED24CB2AF8B0AF0044715A /* Resource */,
 				DA3C145D2AF31E2D00324A14 /* ContentView.swift */,
 				DAED24F42AF9D25C0044715A /* SplashView.swift */,
+				B0DD510F2B13081C000D72AB /* ProductresultView.swift */,
 				DAED24C92AF8AE280044715A /* ImagePicker.swift */,
 				DA3C145F2AF31E2F00324A14 /* Assets.xcassets */,
 				DA3C14612AF31E2F00324A14 /* Preview Content */,
@@ -109,7 +112,6 @@
 		DAC19F3D2B0CB4BB002FE2E8 /* ML */ = {
 			isa = PBXGroup;
 			children = (
-				DA880D8F2B0CCCE4005FE810 /* classifier.mlmodel */,
 			);
 			path = ML;
 			sourceTree = "<group>";
@@ -245,7 +247,7 @@
 				DAED24CD2AF8B0BD0044715A /* Colors.swift in Sources */,
 				DA3C145E2AF31E2D00324A14 /* ContentView.swift in Sources */,
 				DAED24F72AF9D2F90044715A /* LottieView.swift in Sources */,
-				DA880D902B0CCCE4005FE810 /* classifier.mlmodel in Sources */,
+				B0DD51102B13081C000D72AB /* ProductresultView.swift in Sources */,
 				DA3C145C2AF31E2D00324A14 /* ReadProductApp.swift in Sources */,
 				DAED24F52AF9D25C0044715A /* SplashView.swift in Sources */,
 			);
